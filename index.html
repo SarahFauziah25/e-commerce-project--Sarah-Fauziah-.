@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AhSar Cemal Cemil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4e111c;
+      --secondary: #4e342e;
+      --accent: #ffe8d6;
+      --light: #fffdf8;
+      --text: #2e2e2e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(45deg, var(--primary), #ffb347);
+      padding: 1rem 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .logo span {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    .cart-icon {
+      font-size: 1.3rem;
+      background: white;
+      color: var(--primary);
+      padding: 0.4rem 0.8rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    main {
+      padding: 2rem 5vw;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+
+    .produk-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    article {
+      flex: 1 1 calc(33.333% - 1rem);
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    article:hover {
+      transform: translateY(-5px);
+    }
+
+    article img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 1rem;
+    }
+
+    .info h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    .info p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .info strong {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: var(--secondary);
+    }
+
+    .add-to-cart {
+      background: var(--primary);
+      color: rgb(250, 236, 236);
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      margin-top: 0.7rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background: #ff7522;
+    }
+
+    ul.kategori {
+      padding-left: 1rem;
+      list-style: disc;
+    }
+
+    footer {
+      background-color: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      article {
+        flex: 1 1 48%;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      article {
+        flex: 1 1 100%;
+      }
+
+      .logo span {
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+      <span>AhSar Cemal Cemil</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#">Keranjang</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="cart-icon">🛒</a>
+  </header>
+
+  <main>
+    <section id="produk">
+      <h2>Produk Terbaru</h2>
+      <div class="produk-grid">
+        <article>
+          <img src="keripik.png" alt="Keripik Telur Asin" />
+          <div class="info">
+            <h3><a href="detail-keripik-original.html">Keripik Telur Asin</a></h3>
+            <p>Rasa otentik khas keripik buatan UMKM lokal.</p>
+            <strong>Rp 20.000</strong>
+            <button class="add-to-cart">+ Tambah ke Keranjang</button>
+          </div>
+        </article>
+        <article>
+          <img src="1745073551232.png" alt="Keripik Manis" />
+          <div class="info">
+            <h3><a href="detail-keripik-manis.html">Keripik Manis</a></h3>
+            <p>Manis dan gurih cocok buat anak-anak.</p>
+            <strong>Rp 15.000</strong>
+            <button class="add-to-cart">+ Tambah ke Keranjang</button>
+          </div>
+        </article>
+        <article>
+          <img src="1745073551252.png" alt="Keripik Pisang Original" />
+          <div class="info">
+            <h3><a href="detail-keripik-telur.html">Keripik pisang original</a></h3>
+            <p>Keripik Pisang Klasik Yng bikin asik semua orang.</p>
+            <strong>Rp 15.000</strong>
+            <button class="add-to-cart">+ Tambah ke Keranjang</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="kategori">
+      <h2>Kategori</h2>
+      <ul class="kategori">
+        <li>Keripik Manis</li>
+        <li>Keripik Original</li>
+        <li>Telur Asin</li>
+        
+      </ul>
+    </section>
+
+    <section id="tentang">
+      <h2>Tentang Kami</h2>
+      <p>AhSar Cemal Cemil adalah UMKM lokal yang memproduksi keripik pisang unik dengan berbagai rasa, tanpa bahan pengawet dan aman dikonsumsi segala usia.</p>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak Kami</h2>
+      <p>WhatsApp: <strong>0882-0008-78442</strong></p>
+      <p>Shopee: <strong>AhSar Cemal Cemil</strong></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AhSar Cemal Cemil. Semua hak cipta dilindungi.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert("Produk berhasil ditambahkan ke keranjang!");
+      });
+    });
+  </script>
+</body>
+</html>
